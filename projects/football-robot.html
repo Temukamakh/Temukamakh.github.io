@@ -3,71 +3,87 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Wave Dash: omni-wheel football robot · Temur Makharadze</title>
+<title>Wave Dash · Temur Makharadze</title>
+<meta name="description" content="A robot footballer that can drive in any direction without turning.">
+<script>document.documentElement.classList.add("js")</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap">
 <link rel="stylesheet" href="../assets/style.css">
 </head>
 <body>
-<header class="site-header">
-  <div class="wrap">
-    <a class="brand" href="../index.html">Temur Makharadze <span>· Mechanical Engineering</span></a>
-    <nav class="nav"><a href="../index.html#projects" aria-current="page">Projects</a><a href="../drawings.html">Drawings</a><a href="../courses.html">Courses</a><a href="../cv.html">CV</a><a href="#contact">Contact</a></nav>
+<header class="nav">
+  <div class="nav-in">
+    <a class="brand" href="../index.html">Temur Makharadze</a>
+    <nav><a href="../index.html#work" aria-current="page">Work</a><a href="../drawings.html">Drawings</a><a href="../courses.html">Certificates</a><a href="../cv.html">CV</a><a href="#contact">Contact</a></nav>
   </div>
 </header>
 <main>
-  <section class="project-head">
+  <section class="p-hero">
     <div class="wrap">
-      <p class="crumb"><a href="../index.html#projects">Projects</a> / Wave Dash: omni-wheel football robot</p>
       <p class="eyebrow">Competition robotics · team of two</p>
-      <h1>Wave Dash: omni-wheel football robot</h1>
-      <p class="lede">A remote-controlled, four-wheel omnidirectional robot built by a team of two for the university robot football championship. I was responsible for the mechanical and electrical side.</p>
+      <h1>Wave Dash</h1>
+      <p class="tagline">A robot footballer that can drive in any direction without turning.</p>
       
+      <div class="stage reveal"><img src="../assets/football-robot/iso.webp" data-zoom="../assets/football-robot/iso.webp" data-caption="Wave Dash with its shell, deck and electronics" alt="Wave Dash with its shell, deck and electronics"></div>
+      <p class="stage-cap">Wave Dash with its shell, deck and electronics</p>
     </div>
   </section>
-  <section class="section" style="padding-top:8px">
-    <div class="wrap split">
-      <div class="stage"><img src="../assets/football-robot/iso.webp" data-zoom="../assets/football-robot/iso.webp" data-caption="Wave Dash with its shell, deck and electronics" alt="Wave Dash with its shell, deck and electronics"></div>
-      <aside class="facts"><dl><div><dt>Event</dt><dd>University robot football championship</dd></div><div><dt>Team</dt><dd>2 people; my part: mechanical and electrical</dd></div><div><dt>Drive</dt><dd>4 omni wheels at 45°, one planetary-geared DC motor each</dd></div><div><dt>Kicker</dt><dd>Servo</dd></div><div><dt>Size</dt><dd>387.5 × 387.5 × 100 mm</dd></div><div><dt>Mass</dt><dd>3.9 kg against a 4 kg budget</dd></div><div><dt>Control</dt><dd>Remote, from an RC drone transmitter</dd></div><div><dt>Electronics</dt><dd>Arduino Mega 2560, 4 × BTS7960 drivers, 6S battery</dd></div><div><dt>Design iterations</dt><dd>3</dd></div><div class="note">Dimensions and part counts are read from the SolidWorks assembly (third version).</div></dl></aside>
+  <section class="stats"><div class="wrap"><div class="row"><div class="stat reveal"><b>4</b><span>omni wheels, each with its own motor</span></div><div class="stat reveal"><b>3.9 kg</b><span>final weight, under the 4 kg budget</span></div><div class="stat reveal"><b>3</b><span>design versions</span></div><div class="stat reveal"><b>2</b><span>people in the team</span></div></div></div></section>
+  <section class="band grey short">
+    <div class="wrap narrow">
+      <h2>In short.</h2>
+      <p class="lead">A remote-controlled, four-wheel omnidirectional robot built by a team of two for the university robot football championship. I was responsible for the mechanical and electrical side.</p>
+      <ul class="did"><li class="reveal"><b>My part</b>I did the mechanical and electrical design in a team of two.</li><li class="reveal"><b>Problem</b>The wheels we planned for did not arrive in time, so I redesigned the chassis around borrowed omni wheels.</li><li class="reveal"><b>Result</b>The robot was over its weight budget. Topology studies showed where to cut material, and it finished at 3.9 kg.</li></ul>
     </div>
   </section>
-  <section class="section">
+  <section class="story">
     <div class="wrap"><div class="prose">
       
-      <h2>What it is</h2>
+      <h2>Four wheels that roll in any direction.</h2>
       <p>The chassis is an X-shaped base plate with an omni wheel in each arm. Because every wheel rolls freely sideways,
       the four motor speeds can be combined to move the robot forward, sideways or diagonally, or to spin it on the spot.
       A deck above the motors carries the Arduino Mega and four BTS7960 motor drivers, and a shell with the robot's name
       cut into it closes the sides.</p>
 
-      <h2>From mecanum to omni wheels</h2>
+      <h2>The wheels did not arrive, so the design changed.</h2>
       <p>The first design used mecanum wheels, mounted like ordinary wheels. A shipping problem meant they would not
       arrive in time, so we switched to omni wheels borrowed from a friend. Four omni wheels only work when they are set at
       45°, which meant redesigning the chassis completely.</p>
 
-      <h2>Getting under 4 kg</h2>
+      <h2>Too heavy, then fixed.</h2>
       <p>The redesigned robot came out over its 4 kg mass budget. We ran topology studies in SolidWorks on the materials
       we had, then laser-cut away the material the studies showed was not needed. The finished robot weighs 3.9 kg.</p>
 
-      <h2>Drive and control</h2>
+      <h2>Driven with a drone controller.</h2>
       <p>Each wheel has its own planetary-geared DC motor. The robot is remote-controlled from my drone transmitter.
       The drive code is deliberately simple: it turns the stick inputs into the four wheel speeds, so the omni drive
       responds in a way that is logical to steer. A servo kicks the ball with precision.</p>
 
-      <h2>Result</h2>
+      <h2>It worked.</h2>
       <p>Everything worked as planned, and the final robot came in at 3.9 kg, just under the budget.</p>
       
     </div></div>
   </section>
-  <section class="section">
-    <div class="wrap">
-      <h2>CAD views</h2><div class="gallery"><figure><div class="shot"><img src="../assets/football-robot/iso-180-sm.webp" data-zoom="../assets/football-robot/iso-180.webp" data-caption="Opposite corner" alt="Opposite corner" loading="lazy"></div><figcaption>Opposite corner</figcaption></figure><figure><div class="shot"><img src="../assets/football-robot/iso-open-sm.webp" data-zoom="../assets/football-robot/iso-open.webp" data-caption="Shell hidden: wheels, motor mounts, deck and electronics" alt="Shell hidden: wheels, motor mounts, deck and electronics" loading="lazy"></div><figcaption>Shell hidden: wheels, motor mounts, deck and electronics</figcaption></figure><figure><div class="shot"><img src="../assets/football-robot/iso-180-open-sm.webp" data-zoom="../assets/football-robot/iso-180-open.webp" data-caption="Shell hidden, opposite corner" alt="Shell hidden, opposite corner" loading="lazy"></div><figcaption>Shell hidden, opposite corner</figcaption></figure><figure><div class="shot"><img src="../assets/football-robot/top-sm.webp" data-zoom="../assets/football-robot/top.webp" data-caption="From above: wheels at 45° on the four corners" alt="From above: wheels at 45° on the four corners" loading="lazy"></div><figcaption>From above: wheels at 45° on the four corners</figcaption></figure><figure><div class="shot"><img src="../assets/football-robot/top-open-sm.webp" data-zoom="../assets/football-robot/top-open.webp" data-caption="From above, shell hidden" alt="From above, shell hidden" loading="lazy"></div><figcaption>From above, shell hidden</figcaption></figure><figure><div class="shot"><img src="../assets/football-robot/under-sm.webp" data-zoom="../assets/football-robot/under.webp" data-caption="Underside: wheel openings and base plate" alt="Underside: wheel openings and base plate" loading="lazy"></div><figcaption>Underside: wheel openings and base plate</figcaption></figure><figure><div class="shot"><img src="../assets/football-robot/right-sm.webp" data-zoom="../assets/football-robot/right.webp" data-caption="Side view with the name cut-out" alt="Side view with the name cut-out" loading="lazy"></div><figcaption>Side view with the name cut-out</figcaption></figure><figure><div class="shot"><img src="../assets/football-robot/low-sm.webp" data-zoom="../assets/football-robot/low.webp" data-caption="Low view from the front" alt="Low view from the front" loading="lazy"></div><figcaption>Low view from the front</figcaption></figure></div>
-      <nav class="pager"><span><a href="sumo-robot.html">&larr; 3 kg sumo robot</a></span><span><a href="partforge.html">PartForge &rarr;</a></span></nav>
+  <section class="band" style="padding-top:20px"><div class="wrap"><h2 class="center" style="margin-bottom:30px">CAD views</h2><div class="gallery"><figure><div class="shot"><img src="../assets/football-robot/iso-180-sm.webp" data-zoom="../assets/football-robot/iso-180.webp" data-caption="Opposite corner" alt="Opposite corner" loading="lazy"></div><figcaption>Opposite corner</figcaption></figure><figure><div class="shot"><img src="../assets/football-robot/iso-open-sm.webp" data-zoom="../assets/football-robot/iso-open.webp" data-caption="Shell hidden: wheels, motor mounts, deck and electronics" alt="Shell hidden: wheels, motor mounts, deck and electronics" loading="lazy"></div><figcaption>Shell hidden: wheels, motor mounts, deck and electronics</figcaption></figure><figure><div class="shot"><img src="../assets/football-robot/iso-180-open-sm.webp" data-zoom="../assets/football-robot/iso-180-open.webp" data-caption="Shell hidden, opposite corner" alt="Shell hidden, opposite corner" loading="lazy"></div><figcaption>Shell hidden, opposite corner</figcaption></figure><figure><div class="shot"><img src="../assets/football-robot/top-sm.webp" data-zoom="../assets/football-robot/top.webp" data-caption="From above: wheels at 45° on the four corners" alt="From above: wheels at 45° on the four corners" loading="lazy"></div><figcaption>From above: wheels at 45° on the four corners</figcaption></figure><figure><div class="shot"><img src="../assets/football-robot/top-open-sm.webp" data-zoom="../assets/football-robot/top-open.webp" data-caption="From above, shell hidden" alt="From above, shell hidden" loading="lazy"></div><figcaption>From above, shell hidden</figcaption></figure><figure><div class="shot"><img src="../assets/football-robot/under-sm.webp" data-zoom="../assets/football-robot/under.webp" data-caption="Underside: wheel openings and base plate" alt="Underside: wheel openings and base plate" loading="lazy"></div><figcaption>Underside: wheel openings and base plate</figcaption></figure><figure><div class="shot"><img src="../assets/football-robot/right-sm.webp" data-zoom="../assets/football-robot/right.webp" data-caption="Side view with the name cut-out" alt="Side view with the name cut-out" loading="lazy"></div><figcaption>Side view with the name cut-out</figcaption></figure><figure><div class="shot"><img src="../assets/football-robot/low-sm.webp" data-zoom="../assets/football-robot/low.webp" data-caption="Low view from the front" alt="Low view from the front" loading="lazy"></div><figcaption>Low view from the front</figcaption></figure></div></div></section>
+  <section class="band grey specs">
+    <div class="wrap narrow">
+      <h2>Specifications.</h2>
+      <dl><div><dt>Event</dt><dd>University robot football championship</dd></div><div><dt>Team</dt><dd>2 people; my part: mechanical and electrical</dd></div><div><dt>Drive</dt><dd>4 omni wheels at 45°, one planetary-geared DC motor each</dd></div><div><dt>Kicker</dt><dd>Servo</dd></div><div><dt>Size</dt><dd>387.5 × 387.5 × 100 mm</dd></div><div><dt>Mass</dt><dd>3.9 kg against a 4 kg budget</dd></div><div><dt>Control</dt><dd>Remote, from an RC drone transmitter</dd></div><div><dt>Electronics</dt><dd>Arduino Mega 2560, 4 × BTS7960 drivers, 6S battery</dd></div><div><dt>Design iterations</dt><dd>3</dd></div><span class="note">Dimensions and part counts are read from the SolidWorks assembly (third version).</span></dl>
     </div>
   </section>
+  <nav class="pager"><a href="sumo-robot.html"><small>Previous</small><span>3 kg sumo robot</span></a><a class="next" href="partforge.html"><small>Next</small><span>PartForge</span></a></nav>
 </main>
-<footer class="site-footer" id="contact">
+<footer class="footer" id="contact">
   <div class="wrap">
-    <span>Temur Makharadze · Tbilisi, Georgia</span>
-    <span><a href="mailto:tmakh2023@agruni.edu.ge">tmakh2023@agruni.edu.ge</a> · <a href="https://www.linkedin.com/in/temuka-makharadze-7a7227241/" target="_blank" rel="noopener">LinkedIn</a> · <a href="../cv.html">CV</a></span>
+    <h2>Get in touch.</h2>
+    <a class="mail" href="mailto:tmakh2023@agruni.edu.ge">tmakh2023@agruni.edu.ge</a>
+    <div class="links">
+      <a href="https://www.linkedin.com/in/temuka-makharadze-7a7227241/" target="_blank" rel="noopener">LinkedIn</a>
+      <a href="https://github.com/Temukamakh" target="_blank" rel="noopener">GitHub</a>
+      <a href="../cv.html">CV</a>
+    </div>
+    <p class="small">Temur Makharadze · Mechanical engineer · Tbilisi, Georgia</p>
   </div>
 </footer>
 <script src="../assets/site.js"></script>

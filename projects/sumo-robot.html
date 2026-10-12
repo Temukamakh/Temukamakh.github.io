@@ -4,42 +4,50 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>3 kg sumo robot · Temur Makharadze</title>
+<meta name="description" content="A competition robot I designed, machined and built myself.">
+<script>document.documentElement.classList.add("js")</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap">
 <link rel="stylesheet" href="../assets/style.css">
 </head>
 <body>
-<header class="site-header">
-  <div class="wrap">
-    <a class="brand" href="../index.html">Temur Makharadze <span>· Mechanical Engineering</span></a>
-    <nav class="nav"><a href="../index.html#projects" aria-current="page">Projects</a><a href="../drawings.html">Drawings</a><a href="../courses.html">Courses</a><a href="../cv.html">CV</a><a href="#contact">Contact</a></nav>
+<header class="nav">
+  <div class="nav-in">
+    <a class="brand" href="../index.html">Temur Makharadze</a>
+    <nav><a href="../index.html#work" aria-current="page">Work</a><a href="../drawings.html">Drawings</a><a href="../courses.html">Certificates</a><a href="../cv.html">CV</a><a href="#contact">Contact</a></nav>
   </div>
 </header>
 <main>
-  <section class="project-head">
+  <section class="p-hero">
     <div class="wrap">
-      <p class="crumb"><a href="../index.html#projects">Projects</a> / 3 kg sumo robot</p>
       <p class="eyebrow">Competition robotics · solo design and build</p>
       <h1>3 kg sumo robot</h1>
-      <p class="lede">A sumo robot for the international 3 kg class, built almost entirely from scratch: chassis plates I machined myself, a 6.44:1 gearbox of hardened stainless steel gears, and magnets under the floor for traction.</p>
+      <p class="tagline">A competition robot I designed, machined and built myself.</p>
       
+      <div class="stage reveal"><img src="../assets/sumo-3kg/iso-180.webp" data-zoom="../assets/sumo-3kg/iso-180.webp" data-caption="Front three-quarter view: full-width blade, sensor shield and top cover" alt="Front three-quarter view: full-width blade, sensor shield and top cover"></div>
+      <p class="stage-cap">Front three-quarter view: full-width blade, sensor shield and top cover</p>
     </div>
   </section>
-  <section class="section" style="padding-top:8px">
-    <div class="wrap split">
-      <div class="stage"><img src="../assets/sumo-3kg/iso-180.webp" data-zoom="../assets/sumo-3kg/iso-180.webp" data-caption="Front three-quarter view: full-width blade, sensor shield and top cover" alt="Front three-quarter view: full-width blade, sensor shield and top cover"></div>
-      <aside class="facts"><dl><div><dt>Class</dt><dd>3 kg sumo</dd></div><div><dt>Size</dt><dd>200 × 200 × 103 mm</dd></div><div><dt>Mass</dt><dd>Just under 3 kg</dd></div><div><dt>Motors</dt><dd>2 brushed coreless DC, comparable to Maxon RE 35</dd></div><div><dt>Reduction</dt><dd>6.44:1, two spur stages, module 0.8</dd></div><div><dt>Gears</dt><dd>Hardened stainless steel</dd></div><div><dt>Chassis</dt><dd>6 mm aluminium, CNC machined</dd></div><div><dt>Blade</dt><dd>Stainless steel</dd></div><div><dt>Printed parts</dt><dd>ABS: cover, inner parts, wheel hubs</dd></div><div><dt>Sensors</dt><dd>10: line, object, time-of-flight, infrared</dd></div><div><dt>Analysis</dt><dd>ANSYS: static, transient, modal</dd></div><div><dt>Team</dt><dd>Solo project</dd></div><div class="note">Dimensions, tooth counts and gear layout are read from the SolidWorks assembly.</div></dl></aside>
+  <section class="stats"><div class="wrap"><div class="row"><div class="stat reveal"><b>< 3 kg</b><span>finished weight, inside the class limit</span></div><div class="stat reveal"><b>6.44 : 1</b><span>gearbox, built from hardened steel gears</span></div><div class="stat reveal"><b>10</b><span>sensors watching the ring</span></div><div class="stat reveal"><b>8</b><span>impact cases checked in ANSYS</span></div></div></div></section>
+  <section class="band grey short">
+    <div class="wrap narrow">
+      <h2>In short.</h2>
+      <p class="lead">A sumo robot for the international 3 kg class, built almost entirely from scratch: chassis plates I machined myself, a 6.44:1 gearbox of hardened stainless steel gears, and magnets under the floor for traction.</p>
+      <ul class="did"><li class="reveal"><b>Design</b>I designed every part in SolidWorks, including the two-stage gearbox.</li><li class="reveal"><b>Manufacture</b>I wrote the G-code and CNC machined the aluminium frame, and 3D printed the rest.</li><li class="reveal"><b>Analysis</b>I simulated eight impact cases in ANSYS and found the weak point: the 4 mm rods.</li></ul>
     </div>
   </section>
-  <section class="section">
+  <section class="story">
     <div class="wrap"><div class="prose">
       
-      <h2>Starting point: the 2 kg robot</h2>
+      <h2>It started with a simpler robot.</h2>
       <p>My first sumo robot competed in the 2 kg class in 2024. It won the university championship and placed third
       nationally. It was a simple machine: two low-power DC motors with their own gearboxes, bought wheels, an Arduino Mega,
       and ultrasonic, time-of-flight and infrared sensors. The body was laser-cut black steel sheet that I tack-welded myself.</p>
       <p>It was a great project, but most of what mattered in it came ready-made. For the 3 kg robot I set out to build
       almost everything from scratch.</p>
 
-      <h2>Drivetrain</h2>
+      <h2>A gearbox I built myself.</h2>
       <p>Each side has a brushed coreless DC motor, comparable to a Maxon RE 35, that drives its wheel through a reducer
       I built from hardened stainless steel spur gears. A 14-tooth pinion on the motor drives a 38-tooth gear. A 16-tooth gear
       on the same shaft then drives the 38-tooth gear on the wheel axis through a 39-tooth idler. That gives
@@ -48,7 +56,7 @@
       yet stay fast enough to catch an opponent and push it out of the ring.</p>
       <p>The wheel hubs are printed, and the wheels are CNC-cut from hardened rubber.</p>
 
-      <h2>Chassis and manufacturing</h2>
+      <h2>Made by me, part by part.</h2>
       <ul>
         <li><strong>Side and middle plates:</strong> 6 mm aluminium. I designed them, wrote the G-code and CNC machined them myself.</li>
         <li><strong>Blade:</strong> stainless steel, spanning the full 200 mm width.</li>
@@ -56,10 +64,10 @@
         <li><strong>Magnets:</strong> as many as the floor could fit and the motors could still move. Their pockets fill the underside.</li>
       </ul>
 
-      <h2>Sensors</h2>
+      <h2>Ten sensors watch the ring.</h2>
       <p>Ten sensors give the robot a full picture of the ring at all times: four JSumo line sensors, two Maker object
       sensors, two time-of-flight sensors and two infrared sensors.</p>
-      <h2>Structural analysis</h2>
+      <h2>I tested the frame before any fight.</h2>
       <p>To find out how the frame would hold up in a match, I modelled it in ANSYS Mechanical: the four 6 mm aluminium
       plates and the 4 mm stainless steel rods that tie them together. I loaded this bare frame in seven ways, from a steady
       pushing stall to a 5 cm drop off the ring, and compared the peak stress in the rods and in the plates with their
@@ -79,23 +87,31 @@
       value; it shows how far past its limit the part would be. It also covers the bare frame only.</p>
       
 
-      <h2>Result</h2>
+      <h2>Where it stands.</h2>
       <p>The finished robot weighs just under the 3 kg limit. I designed and built it alone. It has not yet been tested
       against another robot.</p>
       
     </div></div>
   </section>
-  <section class="section">
-    <div class="wrap">
-      <h2>CAD views</h2><div class="gallery"><figure><div class="shot"><img src="../assets/sumo-3kg/iso-90-sm.webp" data-zoom="../assets/sumo-3kg/iso-90.webp" data-caption="Front three-quarter view, opposite side" alt="Front three-quarter view, opposite side" loading="lazy"></div><figcaption>Front three-quarter view, opposite side</figcaption></figure><figure><div class="shot"><img src="../assets/sumo-3kg/iso-sm.webp" data-zoom="../assets/sumo-3kg/iso.webp" data-caption="Rear three-quarter view" alt="Rear three-quarter view" loading="lazy"></div><figcaption>Rear three-quarter view</figcaption></figure><figure><div class="shot"><img src="../assets/sumo-3kg/iso-open-sm.webp" data-zoom="../assets/sumo-3kg/iso-open.webp" data-caption="Top cover removed: motors, gear trains and battery box" alt="Top cover removed: motors, gear trains and battery box" loading="lazy"></div><figcaption>Top cover removed: motors, gear trains and battery box</figcaption></figure><figure><div class="shot"><img src="../assets/sumo-3kg/top-open-sm.webp" data-zoom="../assets/sumo-3kg/top-open.webp" data-caption="Layout from above, cover removed" alt="Layout from above, cover removed" loading="lazy"></div><figcaption>Layout from above, cover removed</figcaption></figure><figure><div class="shot"><img src="../assets/sumo-3kg/iso-drivetrain-sm.webp" data-zoom="../assets/sumo-3kg/iso-drivetrain.webp" data-caption="Outer side plate removed: gear train on its shafts" alt="Outer side plate removed: gear train on its shafts" loading="lazy"></div><figcaption>Outer side plate removed: gear train on its shafts</figcaption></figure><figure><div class="shot"><img src="../assets/sumo-3kg/iso-270-drivetrain-sm.webp" data-zoom="../assets/sumo-3kg/iso-270-drivetrain.webp" data-caption="Gear train, opposite side" alt="Gear train, opposite side" loading="lazy"></div><figcaption>Gear train, opposite side</figcaption></figure><figure><div class="shot"><img src="../assets/sumo-3kg/under-sm.webp" data-zoom="../assets/sumo-3kg/under.webp" data-caption="Underside: magnet pockets, wheels and blade" alt="Underside: magnet pockets, wheels and blade" loading="lazy"></div><figcaption>Underside: magnet pockets, wheels and blade</figcaption></figure><figure><div class="shot"><img src="../assets/sumo-3kg/front-sm.webp" data-zoom="../assets/sumo-3kg/front.webp" data-caption="Side profile: blade angle and shield" alt="Side profile: blade angle and shield" loading="lazy"></div><figcaption>Side profile: blade angle and shield</figcaption></figure><figure><div class="shot"><img src="../assets/sumo-3kg/left-sm.webp" data-zoom="../assets/sumo-3kg/left.webp" data-caption="Front face with sensor openings" alt="Front face with sensor openings" loading="lazy"></div><figcaption>Front face with sensor openings</figcaption></figure></div>
-      <nav class="pager"><span><a href="sphere-1.html">&larr; Sphere-1: a free-flying inspection drone for orbit</a></span><span><a href="football-robot.html">Wave Dash: omni-wheel football robot &rarr;</a></span></nav>
+  <section class="band" style="padding-top:20px"><div class="wrap"><h2 class="center" style="margin-bottom:30px">CAD views</h2><div class="gallery"><figure><div class="shot"><img src="../assets/sumo-3kg/iso-90-sm.webp" data-zoom="../assets/sumo-3kg/iso-90.webp" data-caption="Front three-quarter view, opposite side" alt="Front three-quarter view, opposite side" loading="lazy"></div><figcaption>Front three-quarter view, opposite side</figcaption></figure><figure><div class="shot"><img src="../assets/sumo-3kg/iso-sm.webp" data-zoom="../assets/sumo-3kg/iso.webp" data-caption="Rear three-quarter view" alt="Rear three-quarter view" loading="lazy"></div><figcaption>Rear three-quarter view</figcaption></figure><figure><div class="shot"><img src="../assets/sumo-3kg/iso-open-sm.webp" data-zoom="../assets/sumo-3kg/iso-open.webp" data-caption="Top cover removed: motors, gear trains and battery box" alt="Top cover removed: motors, gear trains and battery box" loading="lazy"></div><figcaption>Top cover removed: motors, gear trains and battery box</figcaption></figure><figure><div class="shot"><img src="../assets/sumo-3kg/top-open-sm.webp" data-zoom="../assets/sumo-3kg/top-open.webp" data-caption="Layout from above, cover removed" alt="Layout from above, cover removed" loading="lazy"></div><figcaption>Layout from above, cover removed</figcaption></figure><figure><div class="shot"><img src="../assets/sumo-3kg/iso-drivetrain-sm.webp" data-zoom="../assets/sumo-3kg/iso-drivetrain.webp" data-caption="Outer side plate removed: gear train on its shafts" alt="Outer side plate removed: gear train on its shafts" loading="lazy"></div><figcaption>Outer side plate removed: gear train on its shafts</figcaption></figure><figure><div class="shot"><img src="../assets/sumo-3kg/iso-270-drivetrain-sm.webp" data-zoom="../assets/sumo-3kg/iso-270-drivetrain.webp" data-caption="Gear train, opposite side" alt="Gear train, opposite side" loading="lazy"></div><figcaption>Gear train, opposite side</figcaption></figure><figure><div class="shot"><img src="../assets/sumo-3kg/under-sm.webp" data-zoom="../assets/sumo-3kg/under.webp" data-caption="Underside: magnet pockets, wheels and blade" alt="Underside: magnet pockets, wheels and blade" loading="lazy"></div><figcaption>Underside: magnet pockets, wheels and blade</figcaption></figure><figure><div class="shot"><img src="../assets/sumo-3kg/front-sm.webp" data-zoom="../assets/sumo-3kg/front.webp" data-caption="Side profile: blade angle and shield" alt="Side profile: blade angle and shield" loading="lazy"></div><figcaption>Side profile: blade angle and shield</figcaption></figure><figure><div class="shot"><img src="../assets/sumo-3kg/left-sm.webp" data-zoom="../assets/sumo-3kg/left.webp" data-caption="Front face with sensor openings" alt="Front face with sensor openings" loading="lazy"></div><figcaption>Front face with sensor openings</figcaption></figure></div></div></section>
+  <section class="band grey specs">
+    <div class="wrap narrow">
+      <h2>Specifications.</h2>
+      <dl><div><dt>Class</dt><dd>3 kg sumo</dd></div><div><dt>Size</dt><dd>200 × 200 × 103 mm</dd></div><div><dt>Mass</dt><dd>Just under 3 kg</dd></div><div><dt>Motors</dt><dd>2 brushed coreless DC, comparable to Maxon RE 35</dd></div><div><dt>Reduction</dt><dd>6.44:1, two spur stages, module 0.8</dd></div><div><dt>Gears</dt><dd>Hardened stainless steel</dd></div><div><dt>Chassis</dt><dd>6 mm aluminium, CNC machined</dd></div><div><dt>Blade</dt><dd>Stainless steel</dd></div><div><dt>Printed parts</dt><dd>ABS: cover, inner parts, wheel hubs</dd></div><div><dt>Sensors</dt><dd>10: line, object, time-of-flight, infrared</dd></div><div><dt>Analysis</dt><dd>ANSYS: static, transient, modal</dd></div><div><dt>Team</dt><dd>Solo project</dd></div><span class="note">Dimensions, tooth counts and gear layout are read from the SolidWorks assembly.</span></dl>
     </div>
   </section>
+  <nav class="pager"><a href="sphere-1.html"><small>Previous</small><span>Sphere-1</span></a><a class="next" href="football-robot.html"><small>Next</small><span>Wave Dash</span></a></nav>
 </main>
-<footer class="site-footer" id="contact">
+<footer class="footer" id="contact">
   <div class="wrap">
-    <span>Temur Makharadze · Tbilisi, Georgia</span>
-    <span><a href="mailto:tmakh2023@agruni.edu.ge">tmakh2023@agruni.edu.ge</a> · <a href="https://www.linkedin.com/in/temuka-makharadze-7a7227241/" target="_blank" rel="noopener">LinkedIn</a> · <a href="../cv.html">CV</a></span>
+    <h2>Get in touch.</h2>
+    <a class="mail" href="mailto:tmakh2023@agruni.edu.ge">tmakh2023@agruni.edu.ge</a>
+    <div class="links">
+      <a href="https://www.linkedin.com/in/temuka-makharadze-7a7227241/" target="_blank" rel="noopener">LinkedIn</a>
+      <a href="https://github.com/Temukamakh" target="_blank" rel="noopener">GitHub</a>
+      <a href="../cv.html">CV</a>
+    </div>
+    <p class="small">Temur Makharadze · Mechanical engineer · Tbilisi, Georgia</p>
   </div>
 </footer>
 <script src="../assets/site.js"></script>

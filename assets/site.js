@@ -21,7 +21,7 @@
   }
   function close() { box.classList.remove("open"); img.removeAttribute("src"); }
 
-  items.forEach((el, i) => (el.closest(".shot, .stage") || el).addEventListener("click", () => show(i)));
+  items.forEach((el, i) => (el.closest(".shot, .stage, .paper") || el).addEventListener("click", () => show(i)));
   box.addEventListener("click", (e) => {
     if (e.target.classList.contains("prev")) show(at - 1);
     else if (e.target.classList.contains("next")) show(at + 1);
@@ -33,4 +33,14 @@
     if (e.key === "ArrowLeft") show(at - 1);
     if (e.key === "ArrowRight") show(at + 1);
   });
+})();
+
+// Sections ease in as they scroll into view. Without this script nothing is hidden.
+(function () {
+  const els = document.querySelectorAll(".reveal");
+  if (!("IntersectionObserver" in window)) { els.forEach((e) => e.classList.add("in")); return; }
+  const io = new IntersectionObserver((entries) => entries.forEach((en) => {
+    if (en.isIntersecting) { en.target.classList.add("in"); io.unobserve(en.target); }
+  }), { rootMargin: "0px 0px -8% 0px" });
+  els.forEach((e) => io.observe(e));
 })();

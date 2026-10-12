@@ -4,60 +4,68 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>PartForge · Temur Makharadze</title>
+<meta name="description" content="Software that builds standard machine parts for you, ready for CAD.">
+<script>document.documentElement.classList.add("js")</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap">
 <link rel="stylesheet" href="../assets/style.css">
 </head>
 <body>
-<header class="site-header">
-  <div class="wrap">
-    <a class="brand" href="../index.html">Temur Makharadze <span>· Mechanical Engineering</span></a>
-    <nav class="nav"><a href="../index.html#projects" aria-current="page">Projects</a><a href="../drawings.html">Drawings</a><a href="../courses.html">Courses</a><a href="../cv.html">CV</a><a href="#contact">Contact</a></nav>
+<header class="nav">
+  <div class="nav-in">
+    <a class="brand" href="../index.html">Temur Makharadze</a>
+    <nav><a href="../index.html#work" aria-current="page">Work</a><a href="../drawings.html">Drawings</a><a href="../courses.html">Certificates</a><a href="../cv.html">CV</a><a href="#contact">Contact</a></nav>
   </div>
 </header>
 <main>
-  <section class="project-head">
+  <section class="p-hero">
     <div class="wrap">
-      <p class="crumb"><a href="../index.html#projects">Projects</a> / PartForge</p>
       <p class="eyebrow">Software for engineering · solo project</p>
       <h1>PartForge</h1>
-      <p class="lede">A browser tool that turns the parts an engineer draws over and over (involute gears, timing pulleys, bearing housings, DIN 6885 keys) into something you configure instead of model. It builds exact B-rep geometry, warns about undercut teeth or walls too thin to machine, and exports STEP, STL or DXF.</p>
-      <div class="actions"><a class="btn primary" href="https://temukamakh.github.io/partforge/" target="_blank" rel="noopener">Open the live tool</a><a class="btn" href="https://github.com/Temukamakh/partforge" target="_blank" rel="noopener">Source on GitHub</a></div>
+      <p class="tagline">Software that builds standard machine parts for you, ready for CAD.</p>
+      <div class="pills"><a class="pill" href="https://temukamakh.github.io/partforge/" target="_blank" rel="noopener">Open the live tool</a><a class="pill ghost" href="https://github.com/Temukamakh/partforge" target="_blank" rel="noopener">Source on GitHub</a></div>
+      <div class="stage dark reveal"><img src="../assets/partforge/01-interface-bevel-gear.webp" data-zoom="../assets/partforge/01-interface-bevel-gear.webp" data-caption="The interface: part picker, live 3D preview, parameters with their ranges, and the notes each part reports back" alt="The interface: part picker, live 3D preview, parameters with their ranges, and the notes each part reports back"></div>
+      <p class="stage-cap">The interface: part picker, live 3D preview, parameters with their ranges, and the notes each part reports back</p>
     </div>
   </section>
-  <section class="section" style="padding-top:8px">
-    <div class="wrap split">
-      <div class="stage"><img src="../assets/partforge/01-interface-bevel-gear.webp" data-zoom="../assets/partforge/01-interface-bevel-gear.webp" data-caption="The interface: part picker, live 3D preview, parameters with their ranges, and the notes each part reports back" alt="The interface: part picker, live 3D preview, parameters with their ranges, and the notes each part reports back"></div>
-      <aside class="facts"><dl><div><dt>Type</dt><dd>Personal software project, solo</dd></div><div><dt>Built with</dt><dd>Python, build123d on OpenCascade, Flask, three.js</dd></div><div><dt>Generators</dt><dd>25, in 5 families</dd></div><div><dt>Code</dt><dd>About 14,000 lines of Python, 3,200-line interface</dd></div><div><dt>Exports</dt><dd>STEP with metadata, STL, DXF</dd></div><div><dt>CAD integration</dt><dd>SolidWorks over COM, Fusion 360 add-in</dd></div><div><dt>In the browser</dt><dd>Pyodide and OCP.wasm, nothing to install</dd></div><div><dt>Standards</dt><dd>DIN 6885, ISO 286, ISO 606, NEMA, AS568</dd></div><div><dt>Period</dt><dd>August to September 2026</dd></div><div class="note">Figures are read from the repository.</div></dl></aside>
+  <section class="stats"><div class="wrap"><div class="row"><div class="stat reveal"><b>25</b><span>part generators, from gears to springs</span></div><div class="stat reveal"><b>14,000</b><span>lines of Python</span></div><div class="stat reveal"><b>3</b><span>export formats: STEP, STL, DXF</span></div><div class="stat reveal"><b>0</b><span>installs needed: it runs in the browser</span></div></div></div></section>
+  <section class="band grey short">
+    <div class="wrap narrow">
+      <h2>In short.</h2>
+      <p class="lead">A browser tool that turns the parts an engineer draws over and over (involute gears, timing pulleys, bearing housings, DIN 6885 keys) into something you configure instead of model. It builds exact B-rep geometry, warns about undercut teeth or walls too thin to machine, and exports STEP, STL or DXF.</p>
+      <ul class="did"><li class="reveal"><b>Idea</b>Gears, pulleys and bearing housings follow standards. You should set them up, not draw them again.</li><li class="reveal"><b>What it does</b>You enter the engineering values. It builds exact geometry and warns you about mistakes.</li><li class="reveal"><b>Where it goes</b>Parts go straight into SolidWorks or Fusion, or to a laser cutter.</li></ul>
     </div>
   </section>
-  <section class="section">
+  <section class="story">
     <div class="wrap"><div class="prose">
       
-      <h2>Why I built it</h2>
+      <h2>Standard parts should not be drawn twice.</h2>
       <p>Standard parts are defined by standards, not by design decisions. A 31-tooth involute gear is a tooth form with
       three interesting inputs: the module, the tooth count and the bore. The same goes for a timing pulley groove, a chain
       sprocket, an O-ring gland or a NEMA motor plate. Modelling them by hand is slow and repetitive, and a slip while
       copying a table of standard dimensions is the kind of error that survives all the way to a machined part.</p>
       <p>PartForge is the tool I wanted while designing competition robots: you configure the part instead of modelling it.</p>
 
-      <h2>How it works</h2>
+      <h2>One small file per part.</h2>
       <p>Each part is one Python file that declares its parameters and builds its solid with build123d on the OpenCascade
       kernel, so the result is exact B-rep geometry, not a mesh. The interface is generated from that declaration, which
       means adding a part is a matter of writing geometry, not UI. There are 25 generators in five families: power
       transmission, shafts and connections, mounting and structure, motion and sealing, and fluid parts.</p>
 
-      <h2>Parts that answer back</h2>
+      <h2>It tells you when something is wrong.</h2>
       <p>Each generator checks what it builds and reports the actual number and the fix. It knows that the DIN 6885 key for
       a 10 mm shaft is 3 × 3 mm at 1.8 mm depth, and that an ISO 286 H7 bore of 10 mm is +0.000 / +0.015. It warns that
       eleven teeth at a 20° pressure angle will undercut and roughly how much profile shift corrects it, that a wall is too
       thin to machine, or that a spring will buckle before it reaches solid height.</p>
 
-      <h2>Designing a whole reduction</h2>
+      <h2>It can design a whole gearbox.</h2>
       <p>The drive train generator designs the assembly, not just one gear. Ask it to reduce 1450 rpm to 50 rpm and it
       searches the tooth counts you are willing to use (14,319 combinations in under two seconds), then lists the trains
       that land closest, each with its real ratio, error, output speed and centre distances. Load one and it builds every
       gear meshed at the right centres, as an assembly you can export.</p>
 
-      <h2>Getting parts into CAD</h2>
+      <h2>Straight into CAD.</h2>
       <ul>
         <li><strong>STEP with metadata:</strong> every parameter and computed dimension travels as a custom property, so it
         reaches the bill of materials.</li>
@@ -69,31 +77,39 @@
         blocks simulated input. The tool puts the DXF on the clipboard instead, which an elevated program can still read.</li>
       </ul>
 
-      <h2>Runs in the browser</h2>
+      <h2>Nothing to install.</h2>
       <p>The same generators also run entirely on the client through Pyodide and OCP.wasm. The published build does real
       CAD in a browser, including on a phone, with nothing to install and no server.</p>
 
-      <h2>Standards built in</h2>
+      <h2>Standards built in.</h2>
       <p>DIN 6885 parallel keys, ISO 286 H7 fits, ISO 606 and ANSI roller chain, NEMA frames 8 to 42, fourteen belt profiles
       (HTD, GT2, AT5, T and MXL families), AS568 O-ring sections, and metric coarse threads with tap and clearance drills.</p>
 
-      <h2>Testing</h2>
+      <h2>Tested automatically.</h2>
       <p>A test suite builds every generator across its parameter range and exports all three formats. Each case runs in
       its own subprocess, so one runaway build cannot stop the rest.</p>
       
     </div></div>
   </section>
-  <section class="section">
-    <div class="wrap">
-      <h2>Screenshots</h2><div class="gallery"><figure><div class="shot"><img src="../assets/partforge/02-drive-train-2-stage-sm.webp" data-zoom="../assets/partforge/02-drive-train-2-stage.webp" data-caption="A two-stage 12:1 reducer built as one assembly, with ratio, output speed, torque and centre distances computed" alt="A two-stage 12:1 reducer built as one assembly, with ratio, output speed, torque and centre distances computed" loading="lazy"></div><figcaption>A two-stage 12:1 reducer built as one assembly, with ratio, output speed, torque and centre distances computed</figcaption></figure><figure><div class="shot"><img src="../assets/partforge/03-reduction-planner-sm.webp" data-zoom="../assets/partforge/03-reduction-planner.webp" data-caption="The reduction planner: 14,319 tooth-count combinations searched and ranked by how close they land" alt="The reduction planner: 14,319 tooth-count combinations searched and ranked by how close they land" loading="lazy"></div><figcaption>The reduction planner: 14,319 tooth-count combinations searched and ranked by how close they land</figcaption></figure><figure><div class="shot"><img src="../assets/partforge/04-dxf-outline-preview-sm.webp" data-zoom="../assets/partforge/04-dxf-outline-preview.webp" data-caption="DXF outline preview before export: 68 closed loops and the material area, for laser cutting" alt="DXF outline preview before export: 68 closed loops and the material area, for laser cutting" loading="lazy"></div><figcaption>DXF outline preview before export: 68 closed loops and the material area, for laser cutting</figcaption></figure><figure><div class="shot"><img src="../assets/partforge/05-cart-to-assembly-sm.webp" data-zoom="../assets/partforge/05-cart-to-assembly.webp" data-caption="Collecting nine parts and sending them into SolidWorks as a single assembly" alt="Collecting nine parts and sending them into SolidWorks as a single assembly" loading="lazy"></div><figcaption>Collecting nine parts and sending them into SolidWorks as a single assembly</figcaption></figure><figure><div class="shot"><img src="../assets/partforge/06-part-catalogue-sm.webp" data-zoom="../assets/partforge/06-part-catalogue.webp" data-caption="All 25 generators at their default settings" alt="All 25 generators at their default settings" loading="lazy"></div><figcaption>All 25 generators at their default settings</figcaption></figure></div>
-      <nav class="pager"><span><a href="football-robot.html">&larr; Wave Dash: omni-wheel football robot</a></span><span><a href="robot-arm-scans.html">Reverse engineering a robot arm from 3D scans &rarr;</a></span></nav>
+  <section class="band" style="padding-top:20px"><div class="wrap"><h2 class="center" style="margin-bottom:30px">Screenshots</h2><div class="gallery"><figure><div class="shot"><img src="../assets/partforge/02-drive-train-2-stage-sm.webp" data-zoom="../assets/partforge/02-drive-train-2-stage.webp" data-caption="A two-stage 12:1 reducer built as one assembly, with ratio, output speed, torque and centre distances computed" alt="A two-stage 12:1 reducer built as one assembly, with ratio, output speed, torque and centre distances computed" loading="lazy"></div><figcaption>A two-stage 12:1 reducer built as one assembly, with ratio, output speed, torque and centre distances computed</figcaption></figure><figure><div class="shot"><img src="../assets/partforge/03-reduction-planner-sm.webp" data-zoom="../assets/partforge/03-reduction-planner.webp" data-caption="The reduction planner: 14,319 tooth-count combinations searched and ranked by how close they land" alt="The reduction planner: 14,319 tooth-count combinations searched and ranked by how close they land" loading="lazy"></div><figcaption>The reduction planner: 14,319 tooth-count combinations searched and ranked by how close they land</figcaption></figure><figure><div class="shot"><img src="../assets/partforge/04-dxf-outline-preview-sm.webp" data-zoom="../assets/partforge/04-dxf-outline-preview.webp" data-caption="DXF outline preview before export: 68 closed loops and the material area, for laser cutting" alt="DXF outline preview before export: 68 closed loops and the material area, for laser cutting" loading="lazy"></div><figcaption>DXF outline preview before export: 68 closed loops and the material area, for laser cutting</figcaption></figure><figure><div class="shot"><img src="../assets/partforge/05-cart-to-assembly-sm.webp" data-zoom="../assets/partforge/05-cart-to-assembly.webp" data-caption="Collecting nine parts and sending them into SolidWorks as a single assembly" alt="Collecting nine parts and sending them into SolidWorks as a single assembly" loading="lazy"></div><figcaption>Collecting nine parts and sending them into SolidWorks as a single assembly</figcaption></figure><figure><div class="shot"><img src="../assets/partforge/06-part-catalogue-sm.webp" data-zoom="../assets/partforge/06-part-catalogue.webp" data-caption="All 25 generators at their default settings" alt="All 25 generators at their default settings" loading="lazy"></div><figcaption>All 25 generators at their default settings</figcaption></figure></div></div></section>
+  <section class="band grey specs">
+    <div class="wrap narrow">
+      <h2>Specifications.</h2>
+      <dl><div><dt>Type</dt><dd>Personal software project, solo</dd></div><div><dt>Built with</dt><dd>Python, build123d on OpenCascade, Flask, three.js</dd></div><div><dt>Generators</dt><dd>25, in 5 families</dd></div><div><dt>Code</dt><dd>About 14,000 lines of Python, 3,200-line interface</dd></div><div><dt>Exports</dt><dd>STEP with metadata, STL, DXF</dd></div><div><dt>CAD integration</dt><dd>SolidWorks over COM, Fusion 360 add-in</dd></div><div><dt>In the browser</dt><dd>Pyodide and OCP.wasm, nothing to install</dd></div><div><dt>Standards</dt><dd>DIN 6885, ISO 286, ISO 606, NEMA, AS568</dd></div><div><dt>Period</dt><dd>August to September 2026</dd></div><span class="note">Figures are read from the repository.</span></dl>
     </div>
   </section>
+  <nav class="pager"><a href="football-robot.html"><small>Previous</small><span>Wave Dash</span></a><a class="next" href="robot-arm-scans.html"><small>Next</small><span>Robot arm, scanned</span></a></nav>
 </main>
-<footer class="site-footer" id="contact">
+<footer class="footer" id="contact">
   <div class="wrap">
-    <span>Temur Makharadze · Tbilisi, Georgia</span>
-    <span><a href="mailto:tmakh2023@agruni.edu.ge">tmakh2023@agruni.edu.ge</a> · <a href="https://www.linkedin.com/in/temuka-makharadze-7a7227241/" target="_blank" rel="noopener">LinkedIn</a> · <a href="../cv.html">CV</a></span>
+    <h2>Get in touch.</h2>
+    <a class="mail" href="mailto:tmakh2023@agruni.edu.ge">tmakh2023@agruni.edu.ge</a>
+    <div class="links">
+      <a href="https://www.linkedin.com/in/temuka-makharadze-7a7227241/" target="_blank" rel="noopener">LinkedIn</a>
+      <a href="https://github.com/Temukamakh" target="_blank" rel="noopener">GitHub</a>
+      <a href="../cv.html">CV</a>
+    </div>
+    <p class="small">Temur Makharadze · Mechanical engineer · Tbilisi, Georgia</p>
   </div>
 </footer>
 <script src="../assets/site.js"></script>
