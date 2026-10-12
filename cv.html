@@ -41,6 +41,25 @@
   .cv-bar { width: 210mm; margin: 6mm auto -3mm; display: flex; justify-content: space-between; font-size: 10.5pt; font-weight: 600; }
   .cv-bar a:hover { text-decoration: underline; }
   @media print { .cv-bar { display: none; } }
+  /* Phones and narrow windows: the sheet becomes a normal scrolling page. Printing is unaffected. */
+  @media screen and (max-width: 840px) {
+    html { background: #fff; }
+    body { font-size: 15px; line-height: 1.45; }
+    .cv-bar { width: auto; margin: 14px 18px 0; font-size: 15px; }
+    .page { width: auto; height: auto; margin: 0; padding: 18px 18px 40px; box-shadow: none; overflow: visible; }
+    h1 { font-size: 32px; }
+    .tagline { font-size: 16px; }
+    .contact span { display: inline-block; }
+    h2 { margin-top: 22px; font-size: 12.5px; }
+    .entry { margin-bottom: 14px; }
+    .head { flex-wrap: wrap; gap: 2px 10px; }
+    .head .when { white-space: normal; }
+    ul { padding-left: 18px; }
+    li { margin: 3px 0; }
+    dl { grid-template-columns: 1fr; row-gap: 0; }
+    dd { margin-bottom: 10px; }
+    a { overflow-wrap: anywhere; }
+  }
   /* Unfilled facts. Remove the class once the real value is in. */
   .gap { background: var(--gap); padding: 0 2px; border-radius: 2px; }
 

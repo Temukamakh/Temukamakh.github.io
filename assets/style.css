@@ -47,7 +47,7 @@ h1, h2, h3 { margin: 0; font-weight: 600; letter-spacing: -.022em; }
 .brand { color: var(--ink); font-weight: 600; font-size: 15px; letter-spacing: -.01em; white-space: nowrap; }
 .brand:hover { text-decoration: none; }
 .nav nav { display: flex; gap: 26px; font-size: 13px; }
-.nav nav a { color: var(--ink); opacity: .8; }
+.nav nav a { color: var(--ink); opacity: .8; display: inline-block; line-height: 48px; }
 .nav nav a:hover, .nav nav a[aria-current="page"] { opacity: 1; text-decoration: none; }
 .nav nav a[aria-current="page"] { font-weight: 600; }
 
@@ -224,7 +224,14 @@ table.data .bad { color: var(--bad); font-weight: 600; }
   .pager { grid-template-columns: 1fr; }
   .pager a.next { text-align: left; }
 }
-@media (max-width: 520px) {
-  .brand span { display: none; }
-  .nav nav { gap: 13px; }
+@media (max-width: 600px) {
+  /* Phones: the five links take the whole bar; "Work" leads home, so the name is not repeated here. */
+  .brand { display: none; }
+  .nav-in { width: 100%; padding: 0 14px; }
+  .nav nav { width: 100%; justify-content: space-between; gap: 6px; font-size: 13.5px; }
+  .links { font-size: 17px; }
+  .footer .small, .stage-cap { font-size: 13px; }
+  .tile-img { padding: 22px 18px 0; }
+  .did li { font-size: 17px; }
+  table.data { font-size: 14px; }
 }
