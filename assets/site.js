@@ -35,12 +35,18 @@
   });
 })();
 
-// Sections ease in as they scroll into view. Without this script nothing is hidden.
+// Sections ease in as they scroll into view. The hiding style only applies once this script
+// is running (it adds the "js" class itself), so a blocked or failed script can never hide content.
 (function () {
   const els = document.querySelectorAll(".reveal");
-  if (!("IntersectionObserver" in window)) { els.forEach((e) => e.classList.add("in")); return; }
+  if (!("IntersectionObserver" in window) || !els.length) return;
+  document.documentElement.classList.add("js");
   const io = new IntersectionObserver((entries) => entries.forEach((en) => {
     if (en.isIntersecting) { en.target.classList.add("in"); io.unobserve(en.target); }
-  }), { rootMargin: "0px 0px -8% 0px" });
+  }));
   els.forEach((e) => io.observe(e));
+  // Safety net: if anything is still hidden a few seconds after it should have appeared, show everything.
+  window.addEventListener("load", () => setTimeout(() => {
+    els.forEach((e) => { if (e.getBoundingClientRect().top < innerHeight) e.classList.add("in"); });
+  }, 1500));
 })();
