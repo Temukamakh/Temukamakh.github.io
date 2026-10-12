@@ -1,0 +1,228 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Temur Makharadze — CV</title>
+<style>
+  :root {
+    --ink: #16191d;
+    --muted: #555d66;
+    --rule: #c9ced4;
+    --accent: #0b4f6c;
+    --gap: #ffe27a;
+  }
+  @page { size: A4; margin: 0; }
+  * { box-sizing: border-box; }
+  html { background: #e9ebee; }
+  body {
+    margin: 0;
+    color: var(--ink);
+    font: 9.3pt/1.33 "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+  .page {
+    width: 210mm;
+    height: 297mm;
+    margin: 8mm auto;
+    padding: 11.5mm 15mm 10mm;
+    background: #fff;
+    box-shadow: 0 2px 14px rgba(0, 0, 0, .14);
+    overflow: hidden;
+  }
+  @media print {
+    html { background: #fff; }
+    .page { margin: 0; box-shadow: none; }
+  }
+
+  a { color: var(--accent); text-decoration: none; }
+  /* Screen-only bar that leads back to the portfolio; it never prints. */
+  .cv-bar { width: 210mm; margin: 6mm auto -3mm; display: flex; justify-content: space-between; font-size: 10.5pt; font-weight: 600; }
+  .cv-bar a:hover { text-decoration: underline; }
+  @media print { .cv-bar { display: none; } }
+  /* Unfilled facts. Remove the class once the real value is in. */
+  .gap { background: var(--gap); padding: 0 2px; border-radius: 2px; }
+
+  header { border-bottom: 1.6pt solid var(--accent); padding-bottom: 6pt; }
+  h1 {
+    margin: 0;
+    font-size: 23pt;
+    line-height: 1.05;
+    font-weight: 650;
+    letter-spacing: -.2pt;
+  }
+  .tagline { margin: 3pt 0 0; font-size: 10.6pt; color: var(--accent); font-weight: 600; }
+  .contact { margin: 4pt 0 0; color: var(--muted); }
+  .contact + .contact { margin-top: 1pt; }
+  .contact span + span::before { content: "·"; margin: 0 5pt; color: var(--rule); }
+
+  .profile { margin: 7pt 0 0; }
+
+  h2 {
+    margin: 8pt 0 4pt;
+    padding-bottom: 1.5pt;
+    border-bottom: .6pt solid var(--rule);
+    font-size: 8.4pt;
+    font-weight: 700;
+    letter-spacing: 1.1pt;
+    text-transform: uppercase;
+    color: var(--accent);
+  }
+
+  .entry { margin: 0 0 5pt; break-inside: avoid; }
+  .entry:last-child { margin-bottom: 0; }
+  .head { display: flex; justify-content: space-between; align-items: baseline; gap: 10pt; }
+  .head .what { font-weight: 650; }
+  .head .org { font-weight: 400; }
+  .head .when { flex: none; color: var(--muted); font-variant-numeric: tabular-nums; white-space: nowrap; }
+  .sub { color: var(--muted); }
+  ul { margin: 1.5pt 0 0; padding-left: 11pt; }
+  li { margin: 0; padding-left: 1pt; }
+  li::marker { color: var(--accent); font-size: 8pt; }
+
+  dl { margin: 0; display: grid; grid-template-columns: 31mm 1fr; column-gap: 4pt; row-gap: 1.5pt; }
+  dt { font-weight: 650; }
+  dd { margin: 0; }
+</style>
+</head>
+<body>
+<nav class="cv-bar">
+  <a href="index.html">&larr; Portfolio</a>
+  <a href="Temur_Makharadze_CV.pdf" download>Download PDF</a>
+</nav>
+<main class="page">
+
+  <header>
+    <h1>Temur Makharadze</h1>
+    <p class="tagline">Mechanical Engineering Student, B.Sc. 2027</p>
+    <p class="contact">
+      <span>Tbilisi, Georgia</span>
+      <!--PHONE-->
+      <span><a href="mailto:tmakh2023@agruni.edu.ge">tmakh2023@agruni.edu.ge</a></span>
+    </p>
+    <p class="contact">
+      <span><a href="https://www.linkedin.com/in/temuka-makharadze-7a7227241/">linkedin.com/in/temuka-makharadze-7a7227241</a></span>
+      <span><a href="https://github.com/Temukamakh">github.com/Temukamakh</a></span>
+      <span>Portfolio: <a href="index.html">temukamakh.github.io</a></span>
+    </p>
+  </header>
+
+  <p class="profile">
+    Final-year mechanical engineering student with industrial experience in CNC machining and scan-based
+    reverse engineering (Nasolutions, since 02/2026), SOLIDWORKS CSWP certification, and a track record of
+    building simulation, embedded-control and competition robotics projects. Accepted for a research internship at Forschungszentrum
+    Jülich in February 2027. Seeking a master's in mechanical engineering in Germany, with motorsport as the
+    long-term goal.
+  </p>
+
+  <h2>Education</h2>
+  <div class="entry">
+    <div class="head">
+      <span><span class="what">B.Sc. Mechanical Engineering</span><span class="org">, Agricultural University of Georgia, Tbilisi</span></span>
+      <span class="when">09/2023 – summer 2027 (expected)</span>
+    </div>
+    <ul>
+      <li>Coursework: Finite Element Method, Machine Elements, Strength of Materials, Theory of Mechanisms and Machines,
+        Automotive Theory, Thermodynamics and Heat Transfer, Mechatronics, Automatic and Digital Control,
+        Manufacturing Processes, CAD Methods.</li>
+      <li>240 ECTS, four-year programme taught in Georgian, with three engineering course projects (sophomore, junior, senior).</li>
+    </ul>
+  </div>
+
+  <h2>Experience</h2>
+  <div class="entry">
+    <div class="head">
+      <span><span class="what">Research Intern (accepted)</span><span class="org">, Forschungszentrum Jülich, Institute of Technology and Engineering (ITE)</span></span>
+      <span class="when">starts 02/2027</span>
+    </div>
+    <div class="sub">Helmholtz Association, Jülich, Germany</div>
+    <ul>
+      <li>Selected from about 100 students by the institute director, Prof. Dr. Ghaleb Natour.</li>
+      <li>Preferred group: Simulation and Calculation (FEA, thermal and flow analysis of components under extreme loads).</li>
+    </ul>
+  </div>
+  <div class="entry">
+    <div class="head">
+      <span><span class="what">Engineering Intern</span><span class="org">, Nasolutions (manufacturing company), Georgia</span></span>
+      <span class="when">02/2026 – present</span>
+    </div>
+    <ul>
+      <li>Machine aluminium, stainless steel, carbon steel and titanium parts on 3-axis CNC mills; run CNC routers,
+        laser cutters and 3D printers.</li>
+      <li>Reverse-engineer mechanical and automotive parts from 3D scans into SolidWorks models.</li>
+      <li>Co-designed a 6-axis industrial robot arm for welding. Use SolidWorks daily for part and assembly design.</li>
+    </ul>
+  </div>
+
+  <h2>Projects</h2>
+  <div class="entry">
+    <div class="head">
+      <span><span class="what">Sphere-1: free-flying inspection drone for low Earth orbit (thesis project)</span> · <a href="projects/sphere-1.html">portfolio page</a></span>
+      <span class="when">2026</span>
+    </div>
+    <ul>
+      <li>Designed a 23 cm, 500 g vehicle with eight cold-gas CO2 nozzles: propellant selection, nozzle sizing against the
+        CO2 triple point, and an actuator layout chosen on valve mass.</li>
+      <li>10 g of propellant holds three-axis pointing for 3.3 days; a re-planned survey cut propellant use by two thirds.</li>
+    </ul>
+  </div>
+  <div class="entry">
+    <div class="head">
+      <span><span class="what">Sphere-1 flight control, hardware in the loop</span> · <a href="projects/sphere-1.html">portfolio page</a></span>
+      <span class="when">2026</span>
+    </div>
+    <ul>
+      <li>6-DOF rigid-body simulation in Python with a thruster control law and allocation across eight nozzles, shown in a
+        live 3D view with delta-V and propellant readouts.</li>
+      <li>ESP32 flight controller at 200 Hz with a real IMU; gyro feedforward cut tracking lag from 11° to 1.2°.</li>
+    </ul>
+  </div>
+  <div class="entry">
+    <div class="head">
+      <span><span class="what">Competition robots</span> · <a href="projects/sumo-robot.html">sumo robot</a> · <a href="projects/football-robot.html">football robot</a></span>
+      <span class="when">2024 – present</span>
+    </div>
+    <ul>
+      <li><strong>1st place</strong>, university sumo championship (2 kg class, 03/2024) · <strong>3rd place</strong>, national sumo
+        championship (2 kg, 07/2024) · <strong>4th place</strong>, national BattleBots championship (15 kg class, 07/2024).</li>
+      <li>Designed and built a 3 kg international-class sumo robot alone: aluminium chassis CNC-machined from my own G-code,
+        6.44:1 gearbox of hardened stainless gears, magnets for traction.</li>
+      <li>Mechanical and electrical design of a 3.9 kg omni-wheel football robot (team of two); cut mass with topology studies.</li>
+      <li>Now designing and building 1.5 kg and 5.4 kg combat robots for Robo Battle 2026 (late November).</li>
+    </ul>
+  </div>
+
+  <h2>Leadership</h2>
+  <div class="entry">
+    <div class="head">
+      <span><span class="what">Competition designer</span><span class="org">, university engineering championship, Agricultural University of Georgia</span></span>
+      <span class="when"></span>
+    </div>
+    <ul>
+      <li>Designing an autonomous RC car race on a NASCAR-style oval for first-year students, covering mechanical, electrical
+        and software work. Set the technical scope, rules and difficulty.</li>
+    </ul>
+  </div>
+
+  <h2>Skills</h2>
+  <dl>
+    <dt>CAD</dt>
+    <dd>SolidWorks (daily industrial use), AutoCAD, reverse engineering from 3D scans</dd>
+    <dt>Manufacturing</dt>
+    <dd>3-axis CNC milling, CNC routing, laser cutting, 3D printing, 3D scanning</dd>
+    <dt>Simulation, code</dt>
+    <dd>ANSYS Mechanical (static, transient and modal FEA), Python (6-DOF dynamics, control)</dd>
+    <dt>Embedded</dt>
+    <dd>ESP32, IMU sensors, serial communication, PWM control</dd>
+    <dt>Certifications</dt>
+    <dd>SOLIDWORKS CSWP, CSWA · <a href="courses.html">“Modern Methods in Engineering” block course</a> (FZ Jülich ITE, 09/2026)</dd>
+    <dt>Languages</dt>
+    <dd>Georgian (native), English (fluent; IELTS Academic planned for 11/2026), German (A2)</dd>
+    <dt>Interests</dt>
+    <dd>CFD, FEA, vehicle dynamics, mechatronics, motorsport and Formula Student</dd>
+  </dl>
+
+</main>
+</body>
+</html>

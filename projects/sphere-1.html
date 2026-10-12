@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Sphere-1: a free-flying inspection drone for orbit · Temur Makharadze</title>
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="../index.html">Temur Makharadze <span>· Mechanical Engineering</span></a>
+    <nav class="nav"><a href="../index.html#projects" aria-current="page">Projects</a><a href="../drawings.html">Drawings</a><a href="../courses.html">Courses</a><a href="../cv.html">CV</a><a href="#contact">Contact</a></nav>
+  </div>
+</header>
+<main>
+  <section class="project-head">
+    <div class="wrap">
+      <p class="crumb"><a href="../index.html#projects">Projects</a> / Sphere-1: a free-flying inspection drone for orbit</p>
+      <p class="eyebrow">Thesis project · spacecraft propulsion and control</p>
+      <h1>Sphere-1: a free-flying inspection drone for orbit</h1>
+      <p class="lede">Sphere-1 is a 23 cm, 500 g free-flying drone designed to work within a few metres of a larger spacecraft and photograph it in the visible and thermal bands. Eight cold-gas nozzles fed from 10 g of liquid carbon dioxide give it translation and attitude control. This is the project that led to my research internship at Forschungszentrum Jülich.</p>
+      <div class="actions"><a class="btn primary" href="../assets/sphere-1/Sphere-1_Project_Report.pdf" target="_blank" rel="noopener">Read the full report (PDF, 101 pages)</a></div>
+    </div>
+  </section>
+  <section class="section" style="padding-top:8px">
+    <div class="wrap split">
+      <div class="stage"><img src="../assets/sphere-1/hero-iss.webp" data-zoom="../assets/sphere-1/hero-iss.webp" data-caption="Sphere-1 beside the International Space Station, from the survey simulator" alt="Sphere-1 beside the International Space Station, from the survey simulator"></div>
+      <aside class="facts"><dl><div><dt>Type</dt><dd>Thesis project, defended September 2026</dd></div><div><dt>Vehicle</dt><dd>23 cm sphere, 500 g wet mass</dd></div><div><dt>Propellant</dt><dd>10 g liquid CO2, cold gas</dd></div><div><dt>Thrusters</dt><dd>8 nozzles: 4 radial, 4 canted at 38.5°</dd></div><div><dt>Thrust</dt><dd>94 mN per nozzle</dd></div><div><dt>Control</dt><dd>6 degrees of freedom, 200 Hz</dd></div><div><dt>Pointing life</dt><dd>3.3 days within ±1.5°</dd></div><div><dt>Delta-v</dt><dd>9.18 m/s</dd></div><div><dt>Test rig</dt><dd>ESP32 and MPU6050, hardware in the loop</dd></div><div><dt>Tools</dt><dd>SolidWorks, MATLAB, Python</dd></div><div class="note">Figures are taken from the project report, prepared for Prof. Dr. Ghaleb Natour.</div></dl></aside>
+    </div>
+  </section>
+  <section class="section">
+    <div class="wrap"><div class="prose">
+      
+      <h2>The gap it fills</h2>
+      <p>After the Columbia accident, the Shuttle flew every mission with a 50-foot sensor boom and performed a pitch
+      manoeuvre under the Space Station so its heat shield could be photographed. Both are workarounds for one missing
+      function: a camera that can leave the vehicle and look back at it. Sphere-1 is a study of the smallest vehicle that
+      could do that. It has to leave no contamination on the surface it inspects, be small enough to be a payload and not a
+      mission, and hold its pointing for a useful time on very little gas.</p>
+
+      <h2>The propellant fixes the nozzle</h2>
+      <p>Carbon dioxide stores as a liquid at about 57 bar, so the tank is light, but it deposits as a solid below its
+      triple point of 216.6 K. Holding the nozzle exit above that temperature caps the exit Mach number at 1.589 and the
+      expansion area ratio at 1.266. At the 0.80 mm flight throat, the divergent cone that ratio allows would be 0.18 mm
+      long, so the nozzle is converging only. That costs 4.5 % of specific impulse and gives a part that can be machined
+      repeatably.</p>
+      </div><figure class="wide"><img src="../assets/sphere-1/exit-temperature.webp" data-zoom="../assets/sphere-1/exit-temperature.webp" data-caption="Nozzle exit temperature against expansion ratio. The CO2 triple point sets the ceiling at an area ratio of 1.266." alt="Nozzle exit temperature against expansion ratio. The CO2 triple point sets the ceiling at an area ratio of 1.266." loading="lazy"><figcaption>Nozzle exit temperature against expansion ratio. The CO2 triple point sets the ceiling at an area ratio of 1.266.</figcaption></figure><div class="prose">
+
+      <h2>Valve mass sets the nozzle count</h2>
+      <p>Six-axis control with push-only thrusters needs at least seven. Twelve decouple cleanly, but twelve valves at
+      25 g each put the vehicle 90 g over budget before any propellant is loaded. Seven have no opposing pairs, so every
+      translation carries an unwanted torque. Eight, as four radial and four canted nozzles, recover the decoupling of
+      twelve within the mass budget. Compared on angular impulse over the life of the tank, eight wins for any valve
+      heavier than 14.7 g, and the lightest flight solenoid available weighs 20 g.</p>
+      </div><div class="gallery in-body"><figure><div class="shot"><img src="../assets/sphere-1/twelve-nozzles-sm.webp" data-zoom="../assets/sphere-1/twelve-nozzles.webp" data-caption="First iteration: twelve nozzles in six opposing pairs" alt="First iteration: twelve nozzles in six opposing pairs" loading="lazy"></div><figcaption>First iteration: twelve nozzles in six opposing pairs</figcaption></figure><figure><div class="shot"><img src="../assets/sphere-1/eight-nozzles-sm.webp" data-zoom="../assets/sphere-1/eight-nozzles.webp" data-caption="Selected layout: four radial nozzles for force, four canted for torque" alt="Selected layout: four radial nozzles for force, four canted for torque" loading="lazy"></div><figcaption>Selected layout: four radial nozzles for force, four canted for torque</figcaption></figure><figure><div class="shot"><img src="../assets/sphere-1/angular-impulse-sm.webp" data-zoom="../assets/sphere-1/angular-impulse.webp" data-caption="Lifetime angular impulse against valve mass: the layouts cross at 14.7 g" alt="Lifetime angular impulse against valve mass: the layouts cross at 14.7 g" loading="lazy"></div><figcaption>Lifetime angular impulse against valve mass: the layouts cross at 14.7 g</figcaption></figure><figure><div class="shot"><img src="../assets/sphere-1/axis-efficiency-sm.webp" data-zoom="../assets/sphere-1/axis-efficiency.webp" data-caption="What the eight-nozzle symmetry costs per pulse, compared with twelve" alt="What the eight-nozzle symmetry costs per pulse, compared with twelve" loading="lazy"></div><figcaption>What the eight-nozzle symmetry costs per pulse, compared with twelve</figcaption></figure></div><div class="prose">
+
+      <h2>What ten grams can do</h2>
+      <p>One nozzle held open empties the tank in 48 seconds. The same ten grams hold three-axis pointing inside a ±1.5°
+      limit cycle for 3.3 days, a factor of about 5,900. The burn rate scales with the square of the valve opening time, so
+      halving it from 1.0 ms to 0.5 ms quadruples the mission life at no cost in mass. The redundancy of eight nozzles is
+      resolved in closed form by the control allocator, at 200 Hz.</p>
+      </div><div class="gallery in-body"><figure><div class="shot"><img src="../assets/sphere-1/limit-cycle-sm.webp" data-zoom="../assets/sphere-1/limit-cycle.webp" data-caption="Attitude error in the limit cycle: a 35.5 s drift across the band, reversed by one minimum pulse" alt="Attitude error in the limit cycle: a 35.5 s drift across the band, reversed by one minimum pulse" loading="lazy"></div><figcaption>Attitude error in the limit cycle: a 35.5 s drift across the band, reversed by one minimum pulse</figcaption></figure><figure><div class="shot"><img src="../assets/sphere-1/pointing-life-sm.webp" data-zoom="../assets/sphere-1/pointing-life.webp" data-caption="Pointing life against deadband, for three valve opening times" alt="Pointing life against deadband, for three valve opening times" loading="lazy"></div><figcaption>Pointing life against deadband, for three valve opening times</figcaption></figure></div><div class="prose">
+
+      <h2>A cheaper way to survey</h2>
+      <p>Holding a curved path in vacuum needs continuous thrust towards the centre, while a straight leg costs only a
+      burn to start and a burn to stop. Re-planning the survey as straight ballistic legs cut the propellant for one
+      complete pass from 73 % of the tank to 24 %, with coverage almost unchanged at 98.7 % against 99.1 %.</p>
+      </div><figure class="wide"><img src="../assets/sphere-1/ballistic-survey.webp" data-zoom="../assets/sphere-1/ballistic-survey.webp" data-caption="The ballistic survey in flight: a short burn, a long unpowered glide while the scan is taken, and a burn to stop." alt="The ballistic survey in flight: a short burn, a long unpowered glide while the scan is taken, and a burn to stop." loading="lazy"><figcaption>The ballistic survey in flight: a short burn, a long unpowered glide while the scan is taken, and a burn to stop.</figcaption></figure><div class="prose">
+
+      <h2>Validated on hardware</h2>
+      <p>The flight controller runs on an ESP32 at 200 Hz, reads a real inertial measurement unit and drives the simulated
+      vehicle. Adding gyro-rate feedforward cut the mean attitude tracking lag from 11° to 1.2°, on a rig that cost under
+      $50. The controller, processor, sensor and rate are real; the valves are modelled, not driven.</p>
+      </div><div class="gallery in-body"><figure><div class="shot"><img src="../assets/sphere-1/hil-rig-sm.webp" data-zoom="../assets/sphere-1/hil-rig.webp" data-caption="The rig: an ESP32 and an MPU6050 inertial measurement unit" alt="The rig: an ESP32 and an MPU6050 inertial measurement unit" loading="lazy"></div><figcaption>The rig: an ESP32 and an MPU6050 inertial measurement unit</figcaption></figure><figure><div class="shot"><img src="../assets/sphere-1/hil-interface-sm.webp" data-zoom="../assets/sphere-1/hil-interface.webp" data-caption="The simulator interface: commanded and actual attitude, propellant, thruster duty" alt="The simulator interface: commanded and actual attitude, propellant, thruster duty" loading="lazy"></div><figcaption>The simulator interface: commanded and actual attitude, propellant, thruster duty</figcaption></figure></div><div class="prose">
+
+      <h2>Limits and next steps</h2>
+      <p>The report lists twelve known weaknesses with their consequences. The most important is that every thrust and
+      torque figure scales with the injector's effective flow area, which is still a datasheet value. The roadmap is
+      therefore: measure that flow area on a flow bench, measure the real inertia on a bifilar pendulum, then retune the
+      controller and close the loop on the physical vehicle.</p>
+      
+    </div></div>
+  </section>
+  <section class="section">
+    <div class="wrap">
+      
+      <nav class="pager"><span><a href="../index.html#projects">&larr; All projects</a></span><span><a href="sumo-robot.html">3 kg sumo robot &rarr;</a></span></nav>
+    </div>
+  </section>
+</main>
+<footer class="site-footer" id="contact">
+  <div class="wrap">
+    <span>Temur Makharadze · Tbilisi, Georgia</span>
+    <span><a href="mailto:tmakh2023@agruni.edu.ge">tmakh2023@agruni.edu.ge</a> · <a href="https://www.linkedin.com/in/temuka-makharadze-7a7227241/" target="_blank" rel="noopener">LinkedIn</a> · <a href="../cv.html">CV</a></span>
+  </div>
+</footer>
+<script src="../assets/site.js"></script>
+</body>
+</html>

@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Reverse engineering a robot arm from 3D scans · Temur Makharadze</title>
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="../index.html">Temur Makharadze <span>· Mechanical Engineering</span></a>
+    <nav class="nav"><a href="../index.html#projects" aria-current="page">Projects</a><a href="../drawings.html">Drawings</a><a href="../courses.html">Courses</a><a href="../cv.html">CV</a><a href="#contact">Contact</a></nav>
+  </div>
+</header>
+<main>
+  <section class="project-head">
+    <div class="wrap">
+      <p class="crumb"><a href="../index.html#projects">Projects</a> / Reverse engineering a robot arm from 3D scans</p>
+      <p class="eyebrow">Nasolutions internship · 3D scanning and reverse engineering</p>
+      <h1>Reverse engineering a robot arm from 3D scans</h1>
+      <p class="lede">At Nasolutions an industrial robot arm was taken apart down to its last piece, and I scanned every part: the structural castings, the covers, the joint reducers and the axis motors. The scans guided the CAD drawings, new motors were bought, some parts were CNC cut, and the robot was rebuilt.</p>
+      
+    </div>
+  </section>
+  <section class="section" style="padding-top:8px">
+    <div class="wrap split">
+      <div class="stage"><img src="../assets/scans/00-robot-arm-assembly.webp" data-zoom="../assets/scans/00-robot-arm-assembly.webp" data-caption="The scanned parts assembled into the complete arm, one colour per part" alt="The scanned parts assembled into the complete arm, one colour per part"></div>
+      <aside class="facts"><dl><div><dt>Where</dt><dd>Nasolutions, internship</dd></div><div><dt>Object</dt><dd>Industrial robot arm</dd></div><div><dt>Scanner</dt><dd>Creality Raptor Pro</dd></div><div><dt>Software</dt><dd>Creality Scan</dd></div><div><dt>Finished meshes</dt><dd>16</dd></div><div><dt>Mesh detail</dt><dd>0.9 to 2.9 million triangles per part</dd></div><div><dt>Largest part</dt><dd>Lower arm, 718 mm</dd></div><div><dt>Smallest part</dt><dd>Ring flange, 86 mm</dd></div><div><dt>Scanned</dt><dd>July to August 2026</dd></div><div><dt>Outcome</dt><dd>Robot rebuilt with new motors and CNC-cut parts</dd></div><div class="note">Sizes and triangle counts are measured from the scan meshes.</div></dl></aside>
+    </div>
+  </section>
+  <section class="section">
+    <div class="wrap"><div class="prose">
+      
+      <h2>What it is</h2>
+      <p>The arm was dismantled down to its last piece and every part was scanned on its own. That way the surfaces
+      hidden inside the assembled robot, such as bearing seats, bolt circles and the gears inside the reducers, are
+      captured too. The picture above shows the scans put back together, with one colour per part. Each finished scan is a
+      mesh of about one to three million triangles. The lowest part of the arm is missing from the scan files shown here.</p>
+
+      <h2>From scans to a rebuilt robot</h2>
+      <p>The scans were the reference for the CAD drawings: they gave the real geometry of each part to work from.
+      With that in hand, new motors were bought, some parts were CNC cut, and the robot was rebuilt.</p>
+      
+
+      <h2>Structure</h2>
+      <p>The load-carrying castings and their covers, from the shoulder end to the wrist.</p>
+      </div><div class="gallery in-body"><figure><div class="shot"><img src="../assets/scans/07-lower-arm_iso-a-sm.webp" data-zoom="../assets/scans/07-lower-arm_iso-a.webp" data-caption="Lower arm, 718 mm: the long link from shoulder to elbow" alt="Lower arm, 718 mm: the long link from shoulder to elbow" loading="lazy"></div><figcaption>Lower arm, 718 mm: the long link from shoulder to elbow</figcaption></figure><figure><div class="shot"><img src="../assets/scans/07-lower-arm_front-sm.webp" data-zoom="../assets/scans/07-lower-arm_front.webp" data-caption="Lower arm, face view with both joint seats" alt="Lower arm, face view with both joint seats" loading="lazy"></div><figcaption>Lower arm, face view with both joint seats</figcaption></figure><figure><div class="shot"><img src="../assets/scans/01-elbow-housing_iso-a-sm.webp" data-zoom="../assets/scans/01-elbow-housing_iso-a.webp" data-caption="Elbow housing, 333 mm, with the reducer seat" alt="Elbow housing, 333 mm, with the reducer seat" loading="lazy"></div><figcaption>Elbow housing, 333 mm, with the reducer seat</figcaption></figure><figure><div class="shot"><img src="../assets/scans/01-elbow-housing_back-sm.webp" data-zoom="../assets/scans/01-elbow-housing_back.webp" data-caption="Elbow housing, rear, with the motor box" alt="Elbow housing, rear, with the motor box" loading="lazy"></div><figcaption>Elbow housing, rear, with the motor box</figcaption></figure><figure><div class="shot"><img src="../assets/scans/16-forearm-tube_iso-a-sm.webp" data-zoom="../assets/scans/16-forearm-tube_iso-a.webp" data-caption="Forearm tube, 298 mm, flanged at both ends" alt="Forearm tube, 298 mm, flanged at both ends" loading="lazy"></div><figcaption>Forearm tube, 298 mm, flanged at both ends</figcaption></figure><figure><div class="shot"><img src="../assets/scans/05-wrist-housing_iso-a-sm.webp" data-zoom="../assets/scans/05-wrist-housing_iso-a.webp" data-caption="Wrist housing, 191 mm" alt="Wrist housing, 191 mm" loading="lazy"></div><figcaption>Wrist housing, 191 mm</figcaption></figure><figure><div class="shot"><img src="../assets/scans/05-wrist-housing_iso-b-sm.webp" data-zoom="../assets/scans/05-wrist-housing_iso-b.webp" data-caption="Wrist housing, opposite side" alt="Wrist housing, opposite side" loading="lazy"></div><figcaption>Wrist housing, opposite side</figcaption></figure><figure><div class="shot"><img src="../assets/scans/04-forearm-cover_iso-a-sm.webp" data-zoom="../assets/scans/04-forearm-cover_iso-a.webp" data-caption="Oval forearm cover, 217 mm" alt="Oval forearm cover, 217 mm" loading="lazy"></div><figcaption>Oval forearm cover, 217 mm</figcaption></figure><figure><div class="shot"><img src="../assets/scans/15-motor-cover_iso-a-sm.webp" data-zoom="../assets/scans/15-motor-cover_iso-a.webp" data-caption="Box-shaped cover, 223 mm" alt="Box-shaped cover, 223 mm" loading="lazy"></div><figcaption>Box-shaped cover, 223 mm</figcaption></figure><figure><div class="shot"><img src="../assets/scans/11-housing-cover-plate_iso-a-sm.webp" data-zoom="../assets/scans/11-housing-cover-plate_iso-a.webp" data-caption="Formed cover plate, 192 mm" alt="Formed cover plate, 192 mm" loading="lazy"></div><figcaption>Formed cover plate, 192 mm</figcaption></figure></div><div class="prose">
+
+      <h2>Drives</h2>
+      <p>The reducers and motors are grouped here by size, largest first. Which joint each one drives was not recorded,
+      so the pairing is by size only.</p>
+      </div><div class="gallery in-body"><figure><div class="shot"><img src="../assets/scans/06-joint-reducer-191mm_back-sm.webp" data-zoom="../assets/scans/06-joint-reducer-191mm_back.webp" data-caption="Large joint reducer, 191 mm: planet gears on the input side" alt="Large joint reducer, 191 mm: planet gears on the input side" loading="lazy"></div><figcaption>Large joint reducer, 191 mm: planet gears on the input side</figcaption></figure><figure><div class="shot"><img src="../assets/scans/06-joint-reducer-191mm_iso-a-sm.webp" data-zoom="../assets/scans/06-joint-reducer-191mm_iso-a.webp" data-caption="Large joint reducer, output side with its bearing" alt="Large joint reducer, output side with its bearing" loading="lazy"></div><figcaption>Large joint reducer, output side with its bearing</figcaption></figure><figure><div class="shot"><img src="../assets/scans/08-axis-motor-large_iso-a-sm.webp" data-zoom="../assets/scans/08-axis-motor-large_iso-a.webp" data-caption="Large axis motor, 281 mm, splined shaft" alt="Large axis motor, 281 mm, splined shaft" loading="lazy"></div><figcaption>Large axis motor, 281 mm, splined shaft</figcaption></figure><figure><div class="shot"><img src="../assets/scans/02-joint-reducer-146mm_back-sm.webp" data-zoom="../assets/scans/02-joint-reducer-146mm_back.webp" data-caption="Medium joint reducer, 146 mm" alt="Medium joint reducer, 146 mm" loading="lazy"></div><figcaption>Medium joint reducer, 146 mm</figcaption></figure><figure><div class="shot"><img src="../assets/scans/02-joint-reducer-146mm_iso-a-sm.webp" data-zoom="../assets/scans/02-joint-reducer-146mm_iso-a.webp" data-caption="Medium joint reducer, input side" alt="Medium joint reducer, input side" loading="lazy"></div><figcaption>Medium joint reducer, input side</figcaption></figure><figure><div class="shot"><img src="../assets/scans/09-axis-motor-long_iso-a-sm.webp" data-zoom="../assets/scans/09-axis-motor-long_iso-a.webp" data-caption="Axis motor, 245 mm, splined shaft" alt="Axis motor, 245 mm, splined shaft" loading="lazy"></div><figcaption>Axis motor, 245 mm, splined shaft</figcaption></figure><figure><div class="shot"><img src="../assets/scans/10-axis-motor-with-pinion_iso-b-sm.webp" data-zoom="../assets/scans/10-axis-motor-with-pinion_iso-b.webp" data-caption="Axis motor, 158 mm, with a pinion on the shaft" alt="Axis motor, 158 mm, with a pinion on the shaft" loading="lazy"></div><figcaption>Axis motor, 158 mm, with a pinion on the shaft</figcaption></figure><figure><div class="shot"><img src="../assets/scans/12-wrist-reducer-86mm_iso-b-sm.webp" data-zoom="../assets/scans/12-wrist-reducer-86mm_iso-b.webp" data-caption="Small reducer, 86 mm" alt="Small reducer, 86 mm" loading="lazy"></div><figcaption>Small reducer, 86 mm</figcaption></figure><figure><div class="shot"><img src="../assets/scans/12-wrist-reducer-86mm_iso-a-sm.webp" data-zoom="../assets/scans/12-wrist-reducer-86mm_iso-a.webp" data-caption="Small reducer, input shaft side" alt="Small reducer, input shaft side" loading="lazy"></div><figcaption>Small reducer, input shaft side</figcaption></figure><figure><div class="shot"><img src="../assets/scans/13-wrist-flange-ring-86mm_iso-a-sm.webp" data-zoom="../assets/scans/13-wrist-flange-ring-86mm_iso-a.webp" data-caption="Ring flange, 86 mm, the same diameter as the small reducer" alt="Ring flange, 86 mm, the same diameter as the small reducer" loading="lazy"></div><figcaption>Ring flange, 86 mm, the same diameter as the small reducer</figcaption></figure><figure><div class="shot"><img src="../assets/scans/14-wrist-end-unit_iso-b-sm.webp" data-zoom="../assets/scans/14-wrist-end-unit_iso-b.webp" data-caption="Flange unit, 96 mm, with two grease fittings" alt="Flange unit, 96 mm, with two grease fittings" loading="lazy"></div><figcaption>Flange unit, 96 mm, with two grease fittings</figcaption></figure></div><div class="prose">
+      
+    </div></div>
+  </section>
+  <section class="section">
+    <div class="wrap">
+      
+      <nav class="pager"><span><a href="partforge.html">&larr; PartForge</a></span><span><a href="../drawings.html">Technical drawings &rarr;</a></span></nav>
+    </div>
+  </section>
+</main>
+<footer class="site-footer" id="contact">
+  <div class="wrap">
+    <span>Temur Makharadze · Tbilisi, Georgia</span>
+    <span><a href="mailto:tmakh2023@agruni.edu.ge">tmakh2023@agruni.edu.ge</a> · <a href="https://www.linkedin.com/in/temuka-makharadze-7a7227241/" target="_blank" rel="noopener">LinkedIn</a> · <a href="../cv.html">CV</a></span>
+  </div>
+</footer>
+<script src="../assets/site.js"></script>
+</body>
+</html>
